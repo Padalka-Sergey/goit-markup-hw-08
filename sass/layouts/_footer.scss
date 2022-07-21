@@ -1,0 +1,39 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--bg-hero-footer);
+
+    &__container {
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__logo {
+        display: block;
+        width: 145px;
+
+    }
+
+    &__logo--color {
+        color: var(--text-white);
+    }
+
+    &__subtitle {
+        @extend %subtitle;
+
+        display: block;
+        margin-bottom: 20px;
+        color: var(--text-white);
+    }
+
+    &__secondary {
+        margin-left: 70px;
+        width: 206px;
+    }
+
+
+    &__third {
+        margin-left: auto;
+    }
+}
+

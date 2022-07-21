@@ -1,0 +1,143 @@
+.header {
+    background-color: var(--text-white);
+    border-bottom: 1px solid var(--header-border);
+
+    &__nav {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        padding-top: 24px;
+        padding-bottom: 25px;
+    }
+
+    &__logo--color {
+        color: var(--black-logo);
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__contacts {
+        display: flex;
+    }
+
+    &__nav-list {
+        margin-left: 95px;
+    }
+}
+
+
+
+.nav-list {
+    display: flex;
+
+    &__link {
+        @include fonts (var(--title));
+
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        // color: var(--title);
+        // font-weight: 500;
+        // line-height: 1.14;
+        // letter-spacing: 0.02em;
+
+        // transition: var(--link-transition-color);
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+
+
+.nav-list__link {
+    &:hover,
+    &:focus {
+        color: var(--brand-color);
+    }}
+
+
+.contacts__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.contacts__link {
+    &:hover,
+    &:focus {
+        color: var(--brand-color);
+    }
+}
+
+
+.nav-list__link--current {
+    position: relative;
+    color: var(--brand-color);
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: var(--brand-color);
+
+        animation: changeSize 400ms linear 200ms backwards;
+    }
+}
+
+
+
+@keyframes changeSize {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+
+.contacts {
+    margin-left: auto;
+
+    &__link {
+        @include fonts (var(--text));
+
+        display: flex;
+        align-items: center;
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        // color: var(--text);
+        // font-weight: 500;
+        // line-height: 1.14;
+        // letter-spacing: 0.02em;
+
+        // transition: var(--link-transition-color);
+    }
+
+    &__icon-invelope {
+        width: 16px;
+        height: 12px;
+    }
+
+    &__icon-smartphone {
+        width: 10px;
+        height: 16px;
+    }
+
+    &__icon {
+        margin-right: 10px;
+        fill: currentColor;
+    }
+}
+

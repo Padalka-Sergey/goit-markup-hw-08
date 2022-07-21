@@ -1,0 +1,32 @@
+.address {
+    width: 231px;
+    margin-top: 20px;
+
+    &__city-link {
+        color: var(--text-white);
+    }
+
+    &__mail-link,
+    &__tel-link {
+        color: var(--footer-contact);
+    }
+
+    &__item {
+        margin-top: 9px;
+    }
+}
+
+
+
+.address__link {
+    display: block;
+    font-style: normal;
+    transition: var(--link-transition-color);
+
+    &:hover,
+    &:focus {
+        color: var(--brand-color);
+    }
+}
+
+

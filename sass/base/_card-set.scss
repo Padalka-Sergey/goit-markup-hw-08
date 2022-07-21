@@ -1,0 +1,14 @@
+.fomula-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: calc(-1 *var(--cards-gap));
+    margin-bottom: calc(-1 *var(--cards-gap));
+
+    &__item {
+    flex-basis: calc(100%/var(--qty-cards) - var(--cards-gap));
+    margin-right: var(--cards-gap);
+    margin-bottom: var(--cards-gap);
+    }
+
+}
+
