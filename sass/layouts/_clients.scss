@@ -1,24 +1,51 @@
+ 
 .clients {
+  
+    @extend %section-mobile;
     @extend %section;
 
     &__title {
+
+        @extend %title-mobile;
         @extend %title;
 
+        margin-bottom: 30px;
+    }
+    
+    @media screen and (min-width: 1200px) {
+
+    &__title {
         margin-bottom: 50px;
     }
-
+}
+    
     &__list {
-        display: flex;
+        display: flex;       
+        justify-content: center;
         gap: 30px;
+
+        @media screen and (max-width: 1199px) {
+            flex-wrap: wrap;
+        }
     }
 
     &__item {
         height: 92px;
-        flex-basis: 170px;
+
+    @media screen and (max-width: 767px) {
+        flex-basis: 210px;
     }
+
+    @media screen and (min-width: 768px) {
+        flex-basis: 226px;
+    }   
+    
+    @media screen and (min-width: 1200px) {
+        flex-basis: 170px;
+    }  
+    }
+    
 }
-
-
 
 .clients__link {
     display: flex;
@@ -38,18 +65,15 @@
     }
 }
 
-
-
-
 .clients__client-icon--fill {
     fill: currentColor;
 }
 
 .clients {
-    
+
     &__icon-1 {
-        width: 41px;
-        height: 47px;
+        width: 44px;
+        height: 49px;
     }
 
     &__icon-2 {
@@ -58,22 +82,23 @@
     }
 
     &__icon-3 {
-        width: 43px;
-        height: 41px;
+        width: 41px;
+        height: 43px;
     }
 
     &__icon-4 {
-        width: 84px;
-        height: 41px;
+        width: 80px;
+        height: 42px;
     }
 
     &__icon-5 {
-        width: 63px;
-        height: 45px;
+        width: 59px;
+        height: 47px;
     }
 
     &__icon-6 {
-        width: 94px;
-        height: 44px;
+        width: 88px;
+        height: 45px;
     }
 }
+

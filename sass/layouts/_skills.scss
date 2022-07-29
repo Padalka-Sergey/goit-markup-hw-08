@@ -1,53 +1,85 @@
-
 .skills {
     @extend %section;
+    @extend %section-mobile;
 
-    &__section {
-        padding-bottom: 0;
+    @media screen and (min-width: 1200px) {
+        &__section {
+            padding-bottom: 0;
+        }   
+    }
+ 
+    @media screen and (max-width: 480px) {
+        &__item:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (min-width: 481px) {
+        
+        &__list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+
+    @media screen and (max-width: 1199px) {
+            flex-wrap: wrap;
+            }
+        }
     }
     
-    &__list {
-        display: flex;
-    }
-    
-    &__item {
-         width: calc((100% - 90px)/4);
-    }
-    
-    
-    &__item + &__item {
-        margin-left: 30px;
-    }
+    @media screen and (max-width: 767px) {
+            &__item {
+                max-width: 450px;
+            }           
+}
+        
+
+    @media screen and (min-width: 768px) {
+            &__item {
+                width: 354px;
+            }
+        }
+
+     @media screen and (min-width: 1200px) {
+            &__item {
+                width: 270px;
+            }
+        }
+
     
     &__box-img {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-bottom: 30px;
-        width: 270px;
         height: 120px;
-    
+
         background-color: var(--bg-team-filters);
         border-radius: 4px;
+
+    @media screen and (max-width: 767px) {
+            max-width: 450px;
+        }
+
+    @media screen and (min-width: 768px) {
+            max-width: 354px;
+        }
     }
-    
-    &__icon--size {
-        width: 65px;
-        height: 70px;
-    }
-    
+
     &__icon {
         width: 70px;
         height: 70px;
     }
-    
+
+
     &__text {
         color: var(--text);
     }
-    
+
     &__subtitle {
         @extend %subtitle;
 
         margin-bottom: 10px;
     }
 }
+

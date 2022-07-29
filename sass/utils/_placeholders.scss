@@ -1,7 +1,18 @@
-%section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+
+@media screen and (min-width: 1200px) {
+    %section {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
+
+@media screen and (max-width: 1199px) {
+    %section-mobile {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
 
 %button {
     font-weight: 700;
@@ -23,12 +34,24 @@
     }
 }
 
-%title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
+@media screen and (min-width: 1200px) {
+    %title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.17;
+        text-align: center;
+    }
 }
+
+@media screen and (max-width: 1199px) {
+    %title-mobile {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.18;
+        text-align: center;
+    }
+}
+
 
 %subtitle {
     font-weight: 700;

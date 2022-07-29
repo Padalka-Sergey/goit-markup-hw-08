@@ -1,24 +1,29 @@
 .social {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 44px;
-
+    
     &__icon {
-    display: block;
-    width: 20px;
-    height: 20px;
-    fill: currentColor;
+        display: block;
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+}
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
-
-
 .social__icon-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-basis: 44px;
+    padding: 12px;
 
     &:hover,
     &:focus {
@@ -26,12 +31,6 @@
         border-radius: 50%;
         color: var(--text-white);
     }
-    
-    &+& {
-        margin-left: 10px;
-    }
-    
-    
     
     &--team {
         border-radius: 50%;
