@@ -702,8 +702,17 @@ img {
   position: relative;
   display: block;
   margin-bottom: 30px;
-  padding-left: 23px;
   text-align: left;
+}
+@media screen and (max-width: 1199px) {
+  .form__check {
+    padding-left: 23px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .form__check {
+    padding-left: 36px;
+  }
 }
 .form__subtitle {
   display: block;
@@ -787,9 +796,16 @@ img {
 .form__check-on,
 .form__check-off {
   position: absolute;
+  cursor: pointer;
   left: 0;
   top: 4px;
-  cursor: pointer;
+}
+@media screen and (min-width: 1200px) {
+  .form__check-on,
+.form__check-off {
+    left: 12px;
+    top: 3px;
+  }
 }
 
 .form__check .form__check-user ~ .form__check-on {
@@ -803,14 +819,18 @@ img {
 }
 
 .form__check-txt {
-  font-size: 12px;
-  line-height: 1.17;
   color: var(--text);
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+@media screen and (max-width: 1199px) {
+  .form__check-txt {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 .form__link {
   color: var(--brand-color);
@@ -837,8 +857,10 @@ img {
 .address__mail-link, .address__tel-link {
   color: var(--footer-contact);
 }
-.address__item {
-  text-align: center;
+@media screen and (max-width: 1199px) {
+  .address__item {
+    text-align: center;
+  }
 }
 .address__item:not(:last-child) {
   margin-bottom: 8px;
@@ -1117,21 +1139,6 @@ img {
           align-items: center;
 }
 
-@media screen and (min-width: 481px) and (max-width: 767px) {
-  .header {
-    height: 60px;
-  }
-  .header__logo {
-    position: absolute;
-    left: 15px;
-    top: 0;
-  }
-  .mobile-btn {
-    position: absolute;
-    right: 15px;
-    top: 10px;
-  }
-}
 @media screen and (min-width: 768px) {
   .mobile-btn {
     display: none;
@@ -1167,9 +1174,6 @@ img {
     pointer-events: none;
     -webkit-transition: opacity 100ms cubic-bezier(0.4, 0, 0.2, 1), visibility 100ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: opacity 100ms cubic-bezier(0.4, 0, 0.2, 1), visibility 100ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .header {
-    position: relative;
   }
   .header__logo {
     padding-top: 16px;
@@ -1388,9 +1392,15 @@ img {
   background-position: center;
   background-color: var(--bg-hero);
 }
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .hero {
+    padding-bottom: 118px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .hero {
     padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1761,8 +1771,12 @@ img {
 .footer__logo {
   display: block;
   width: 145px;
-  margin-left: auto;
-  margin-right: auto;
+}
+@media screen and (max-width: 1199px) {
+  .footer__logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .footer__logo--color {
   color: var(--text-white);

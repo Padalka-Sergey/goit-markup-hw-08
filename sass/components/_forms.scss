@@ -24,8 +24,16 @@
         position: relative;
         display: block;
         margin-bottom: 30px;
-        padding-left: 23px;
         text-align: left;
+
+        @media screen and (max-width: 1199px) {
+            padding-left: 23px;
+        }
+        
+        @media screen and (min-width: 1200px) {
+            padding-left: 36px;
+        }
+        
     }
 
     &__subtitle {
@@ -90,9 +98,16 @@
 .form__check-on,
 .form__check-off {
     position: absolute;
+    cursor: pointer;
+
     left: 0;
     top: 4px;
-    cursor: pointer;
+
+    @media screen and (min-width: 1200px) {
+        left: 12px;
+        top: 3px;
+    }
+    
 }
 
 .form__check .form__check-user~.form__check-on {
@@ -107,9 +122,11 @@
 .form {
 
     &__check-txt {
-        font-size: 12px;
-        line-height: 1.17;
-
+        @media screen and (max-width: 1199px) {
+            font-size: 12px;
+            line-height: 1.17;
+        }
+       
         color: var(--text);
         cursor: pointer;
         user-select: none;

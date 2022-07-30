@@ -59,24 +59,24 @@
     
 }
 
-@media screen and (min-width: 481px) and (max-width: 767px) {
-    .header {
-        height: 60px;
-    }
+// @media screen and (min-width: 481px) and (max-width: 767px) {
+//     .header {
+//         height: 60px;
+//     }
     
-    .header__logo {
-        position: absolute;
-        left: 15px;
-        top: 0;
-    }
+//     .header__logo {
+//         position: absolute;
+//         left: 15px;
+//         top: 0;
+//     }
 
-    .mobile-btn {
-        position: absolute;
-        right: 15px;
-        top:10px;
-    }
+//     .mobile-btn {
+//         position: absolute;
+//         right: 15px;
+//         top:10px;
+//     }
     
-}
+// }
 
 @media screen and (min-width: 768px) {
     
@@ -128,7 +128,7 @@
     }
 
     .header {
-        position: relative;
+        // position: relative;
 
     &__logo {
         padding-top: 16px;
